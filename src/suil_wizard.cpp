@@ -9,7 +9,6 @@
 #include "ui_suil_wizard.h"
 #include "suil_wizard.h"
 
-
 SWizard::SWizard ( QWidget *parent ) :
     QWidget ( parent ),
     ui ( new Ui::SWizard )
@@ -24,6 +23,10 @@ SWizard::SWizard ( QWidget *parent ) :
 SWizard::~SWizard()
 {
     delete ui;
+    for ( int x = 0; x < this->wizardPages.size(); ++x )
+    {
+        delete this->wizardPages[x];
+    }
 }
 
 void SWizard::loadPages()
