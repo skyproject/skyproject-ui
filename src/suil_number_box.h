@@ -15,7 +15,7 @@
 class SNumberBox : public QSpinBox
 {
     public:
-        explicit SNumberBox ( QWidget *parent = 0 );
+        explicit SNumberBox(QWidget *parent = 0);
 };
 
 #endif // SUIL_NUMBER_BOX_H

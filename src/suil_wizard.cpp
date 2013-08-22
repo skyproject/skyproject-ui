@@ -9,21 +9,21 @@
 #include "ui_suil_wizard.h"
 #include "suil_wizard.h"
 
-SWizard::SWizard ( QWidget *parent ) :
-    QWidget ( parent ),
-    ui ( new Ui::SWizard )
+SWizard::SWizard(QWidget *parent) :
+    QWidget(parent),
+    ui(new Ui::SWizard)
 {
-    ui->setupUi ( this );
-    connect ( ui->buttonNext, SIGNAL ( clicked() ),
-              this, SLOT ( stepNext() ) );
-    connect ( ui->buttonBack, SIGNAL ( clicked() ),
-              this, SLOT ( stepBack() ) );
+    ui->setupUi(this);
+    connect(ui->buttonNext, SIGNAL(clicked()),
+            this, SLOT(stepNext()));
+    connect(ui->buttonBack, SIGNAL(clicked()),
+            this, SLOT(stepBack()));
 }
 
 SWizard::~SWizard()
 {
     delete ui;
-    for ( int x = 0; x < this->wizardPages.size(); ++x )
+    for (int x = 0; x < this->wizardPages.size(); ++x)
     {
         delete this->wizardPages[x];
     }
@@ -31,16 +31,16 @@ SWizard::~SWizard()
 
 void SWizard::loadPages()
 {
-    for ( int x = 0; x < this->wizardPages.size(); x++ )
+    for (int x = 0; x < this->wizardPages.size(); x++)
     {
-        ui->pageLayout->addWidget ( this->wizardPages[x] );
+        ui->pageLayout->addWidget(this->wizardPages[x]);
     }
     switchPage();
 }
 
 void SWizard::stepNext()
 {
-    if ( this->currentPage == ( this->wizardPages.size() - 1 ) )
+    if (this->currentPage == (this->wizardPages.size() - 1))
     {
         emit wizardFinished();
     }
@@ -59,23 +59,23 @@ void SWizard::stepBack()
 
 void SWizard::switchPage()
 {
-    for ( short x = 0; x < this->wizardPages.size(); ++x )
+    for (short x = 0; x < this->wizardPages.size(); ++x)
     {
-        if ( x != currentPage )
+        if (x != currentPage)
         {
-            this->wizardPages[x]->setVisible ( false );
+            this->wizardPages[x]->setVisible(false);
         }
         else
         {
-            this->wizardPages[x]->setVisible ( true );
+            this->wizardPages[x]->setVisible(true);
         }
     }
-    if ( this->currentPage == 0 )
+    if (this->currentPage == 0)
     {
-        ui->buttonBack->setVisible ( false );
+        ui->buttonBack->setVisible(false);
     }
     else
     {
-        ui->buttonBack->setVisible ( true );
+        ui->buttonBack->setVisible(true);
     }
 }

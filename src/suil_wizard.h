@@ -24,7 +24,7 @@ class SWizard : public QWidget
         Q_OBJECT
 
     public:
-        explicit SWizard ( QWidget *parent = 0 );
+        explicit SWizard(QWidget *parent = 0);
         ~SWizard();
         void loadPages();
         std::vector<QWidget *> wizardPages;

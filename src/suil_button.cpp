@@ -11,22 +11,22 @@
 #include "suil_button.h"
 #include "suil_data.h"
 
-SButton::SButton ( QWidget *parent )
+SButton::SButton(QWidget *parent)
 {
-    this->setMinimumHeight ( 35 );
-    this->setMaximumHeight ( 35 );
-    this->setFont ( DEFAULT_FONT );
-    const_cast<QFont &> ( this->font() ).setStyleStrategy ( QFont::PreferAntialias );
+    this->setMinimumHeight(35);
+    this->setMaximumHeight(35);
+    this->setFont(DEFAULT_FONT);
+    const_cast<QFont &>(this->font()).setStyleStrategy(QFont::PreferAntialias);
 }
 
-void SButton::setText ( const QString &text )
+void SButton::setText(const QString &text)
 {
-    if ( this->text() != text )
+    if (this->text() != text)
     {
-        QFontMetrics mtr ( this->font() );
-        int textWidth = mtr.width ( text );
-        this->setMinimumWidth ( ( textWidth + 40 ) );
-        this->setMaximumWidth ( ( textWidth + 40 ) );
-        QPushButton::setText ( text );
+        QFontMetrics mtr(this->font());
+        int textWidth = mtr.width(text);
+        this->setMinimumWidth((textWidth + 40));
+        this->setMaximumWidth((textWidth + 40));
+        QPushButton::setText(text);
     }
 }

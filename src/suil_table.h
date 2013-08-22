@@ -23,13 +23,13 @@ class STable : public QTableWidget
         Q_OBJECT
 
     public:
-        explicit STable ( QWidget *parent = 0 );
+        explicit STable(QWidget *parent = 0);
         ~STable();
-        void addRow ( std::vector<QWidget *> items );
-        void addColumn ( QString title, int relWidth );
+        void addRow(std::vector<QWidget *> items);
+        void addColumn(QString title, int relWidth);
 
     protected:
-        void paintEvent ( QPaintEvent *e );
+        void paintEvent(QPaintEvent *e);
         std::vector<int> columnWidth;
 };
 

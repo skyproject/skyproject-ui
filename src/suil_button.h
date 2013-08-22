@@ -16,8 +16,8 @@ class SButton : public QPushButton
         Q_OBJECT
 
     public:
-        explicit SButton ( QWidget *parent = 0 );
-        virtual void setText ( const QString &text );
+        explicit SButton(QWidget *parent = 0);
+        virtual void setText(const QString &text);
 };
 
 #endif // SUIL_BUTTON_H

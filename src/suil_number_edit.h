@@ -16,7 +16,7 @@ class SNumberEdit : public QLineEdit
         Q_OBJECT
 
     public:
-        explicit SNumberEdit ( QWidget *parent = 0 );
+        explicit SNumberEdit(QWidget *parent = 0);
 };
 
 #endif // SUIL_NUMBER_EDIT_H

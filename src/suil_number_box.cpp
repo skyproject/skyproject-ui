@@ -9,10 +9,10 @@
 #include "suil_number_box.h"
 #include "suil_data.h"
 
-SNumberBox::SNumberBox ( QWidget *parent )
+SNumberBox::SNumberBox(QWidget *parent)
 {
-    this->setFont ( DEFAULT_FONT );
-    this->setMinimumHeight ( 30 );
-    this->setMaximumHeight ( 30 );
-    const_cast<QFont &> ( this->font() ).setStyleStrategy ( QFont::PreferAntialias );
+    this->setFont(DEFAULT_FONT);
+    this->setMinimumHeight(30);
+    this->setMaximumHeight(30);
+    const_cast<QFont &>(this->font()).setStyleStrategy(QFont::PreferAntialias);
 }

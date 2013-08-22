@@ -11,12 +11,12 @@
 #include "suil_number_edit.h"
 #include "suil_data.h"
 
-SNumberEdit::SNumberEdit ( QWidget *parent )
+SNumberEdit::SNumberEdit(QWidget *parent)
 {
-    this->setFont ( DEFAULT_FONT );
+    this->setFont(DEFAULT_FONT);
     QDoubleValidator *validator = new QDoubleValidator();
-    this->setValidator ( validator );
-    this->setMinimumHeight ( 30 );
-    this->setMaximumHeight ( 30 );
-    const_cast<QFont &> ( this->font() ).setStyleStrategy ( QFont::PreferAntialias );
+    this->setValidator(validator);
+    this->setMinimumHeight(30);
+    this->setMaximumHeight(30);
+    const_cast<QFont &>(this->font()).setStyleStrategy(QFont::PreferAntialias);
 }

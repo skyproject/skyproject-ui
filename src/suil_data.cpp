@@ -8,4 +8,4 @@
 
 #include "suil_data.h"
 
-const QFont DEFAULT_FONT ( "Open Sans", 11 );
+const QFont DEFAULT_FONT("Open Sans", 11);
